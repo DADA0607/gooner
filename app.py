@@ -1,3 +1,4 @@
+from flask import Flask
 import requests
 import re
 import json
@@ -5,6 +6,7 @@ import urllib.parse
 from bs4 import BeautifulSoup
 import urllib3
 
+app = Flask(__name__)
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 class TeraboxDownloader:
